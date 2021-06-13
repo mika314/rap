@@ -1,25 +1,17 @@
 Rapper = {
-    'name': ['kanye', 'lil uzi vert']
+    'lil uzi vert': {
+        'albums': [
+            ('luv is Rapper 2', 2000),
+            ('eternal atake', 2001)], 
+        'age': 44), 
+    'kanye': {
+        'albums': [
+            ('College Drop', 2007),
+            ('Life of Pablo', 2005),
+            ('Yeezus', 2001),
+            ('Late Registration', 1000)],
+        'age': 23),
 }
-
-Age = {
-    'kanye': 44,
-    'lil uzi vert': 23
-}
-
-Album = {
-    'lil uzi vert': [
-      ('luv is Rapper 2', 2000),
-      ('eternal atake', 2001)
-    ], 
-    'kanye': [
-      ('College Drop', 2007),
-      ('Life of Pablo', 2005),
-      ('Yeezus', 2001),
-      ('Late Registration', 1000)
-    ],
-}
-
 
 # dirct.values 
 def RapperCheck():
@@ -29,8 +21,8 @@ def RapperCheck():
 
     # if user input is valid, then return False
     # otherwise, return name, age and albums
-    if user in Age.keys():  
-      return (user, Age[user], Album[user])
+    if user in Rapper.keys():  
+      return (user, Rapper[user]['age'], Album[user]['albums'])
     else:
       print('sorry ' + "'" + user + "'" + ' is not in our Rapperbase! ')
       return False
